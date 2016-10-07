@@ -15,10 +15,22 @@
     <div data-role="page" id="list-page">
         <div data-role="header" data-position="fixed" data-theme="c">
             <h1>TODO App</h1>
+            <p>TODOを追加して計画的に毎日を生きよう！</p>
             <a href="#add-page" data-icon="add" class="ui-btn-right">Add</a>
+            <a href="#hoge-page" data-icon="search" class="ui-btn-left">Hoge</a>
         </div>
         <div data-role="content">
             <ul data-role="listview" data-inset="true" id="todo-list"></ul>
+        </div>
+    </div>
+
+    <div data-role="page" id="hoge-page">
+        <div data-role="header" data-position="fixed" data-theme="c">
+            <h1>Add TODO</h1>
+            <a href="#list-page" data-icon="back" class="ui-btn-left">back</a>
+        </div>
+        <div data-role="content">
+            <h1>Hello, World</h1>
         </div>
     </div>
 
