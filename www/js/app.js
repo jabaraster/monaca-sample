@@ -19,3 +19,20 @@ function addTodo(camera_url) {
     $("#todo-list").append("<li>" + img_tag + "<h3>" + title + "</h3><p>" + body + "</p></li>")
     $("#todo-list").listview('refresh');
 };
+
+$(function() {
+    'use strict';
+    $('#ajaxer').on('click', function() {
+        var loading = $('#fountainG');
+        loading.fadeIn();
+        var url = 'https://oqhknqy77a.execute-api.ap-northeast-1.amazonaws.com/prod/';
+        var param = { 'zip-code': '8600047' };
+        $.get(url, param, function(_, status, res) {
+            loading.fadeOut();
+            alert(res.responseText);
+        });
+    });
+    $(document).on('pagecontainerchange', function(e) {
+        console.log(e);
+    });
+})
